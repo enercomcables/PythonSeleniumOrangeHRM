@@ -1,0 +1,21 @@
+
+# Browser automation
+selenium>=4.25,<5
+
+# Test framework
+pytest>=8.3,<10
+
+# HTML test reports
+pytest-html>=4.1,<5
+
+# Configuration management
+PyYAML>=6.0,<7
+
+# Parallel test execution (optional)
+pytest-xdist>=3.6,<4
+
+# Advanced reporting (optional)
+allure-pytest>=2.13,<3
+
+# Environment variables from .env (optional)
+python-dotenv>=1.0,<2
