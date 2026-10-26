@@ -13,6 +13,7 @@ pipeline {
             steps {
                 bat 'python --version'
                 bat 'python -m pip --version'
+                bat '"C:\Users\Admin\AppData\Local\Programs\Python\Python314\python.exe" --version'
             }
         }
 
