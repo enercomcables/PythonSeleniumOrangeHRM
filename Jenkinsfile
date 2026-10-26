@@ -27,9 +27,17 @@ pipeline {
         }
 
         stage('Run Selenium Tests') {
-            steps {
-                bat '"%PYTHON%" -m pytest -v'
-            }
+    steps {
+        withCredentials([
+            usernamePassword(
+                credentialsId: 'orangehrm-login',
+                usernameVariable: 'ORANGEHRM_USERNAME',
+                passwordVariable: 'ORANGEHRM_PASSWORD'
+            )
+        ]) {
+            bat '"%PYTHON%" -m pytest -v'
         }
+    }
+}
     }
 }
